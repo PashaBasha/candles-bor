@@ -88,14 +88,13 @@
         body {
             color: white;
             animation: bgAnim 0.5s infinite;
-            cursor: none;
             font-family: 'Press Start 2P', cursive;
 
         }
 
         .bodyImg {
             animation: bg2Anim 0.8s infinite;
-
+            cursor: none;
 
         }
 
@@ -116,13 +115,13 @@
                 /* background: black;
                  */
                 background: url('photo_2021-10-14_23-02-21.jpg');
-   
+
             }
 
             to {
                 /* background: red; */
                 background: url('photo_2022-02-06_23-28-55.jpg');
-         
+
 
             }
         }
@@ -159,7 +158,12 @@
             left: 50%;
             z-index: 99999;
             animation: cursorAnim 5s infinite alternate;
+            display: none;
 
+        }
+
+        .cursor__active {
+            display: block;
         }
 
         @keyframes cursorAnim {
@@ -414,6 +418,8 @@
 
         setTimeout(() => {
             document.body.classList.add('bodyImg')
+
+            document.querySelector('.cursor').classList.add('cursor__active')
         }, 3000);
 
 
